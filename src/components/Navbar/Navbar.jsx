@@ -11,10 +11,12 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
+  ButtonDropdown,
   Button } from 'reactstrap';
 import DropdownButton from '../DropdownButton/DropdownButton';
 import Basket from '../Basket/Basket';
 import { withRouter } from 'react-router-dom';
+import './Navbar.scss';
 
 class Navnav extends React.Component {
   constructor(props) {
@@ -22,18 +24,20 @@ class Navnav extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-      isOpen: false
+      dropdownOpen: false
     };
   }
+  
   toggle() {
     this.setState({
-      isOpen: !this.state.isOpen
+      dropdownOpen: !this.state.dropdownOpen
     });
   }
+  
   render() {
     return (
-      <div>
-        <Navbar color="light" light expand="md">
+      <div className='myNavNav'>
+        <Navbar color="light" light expand="md" className='fixed-top'>
           <NavbarBrand href="/">CatRat</NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
@@ -53,8 +57,8 @@ class Navnav extends React.Component {
                 >
                   {
                     this.props.location.pathname !== '/random-image'? 
-                      'GET HOT DEAL':
-                      'Go back Home'
+                      'HOT DEAL':
+                      'Back Home'
                   }
                 </Button>
                 {/* <NavLink href="/random-image">Random Cat image</NavLink> */}
@@ -62,11 +66,15 @@ class Navnav extends React.Component {
               <NavItem>
                 <Basket />
               </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  More...
+              <ButtonDropdown 
+                isOpen={this.state.dropdownOpen} 
+                toggle={this.toggle}
+                direction={(['down'])}
+              >
+                <DropdownToggle caret>
+                  More... 
                 </DropdownToggle>
-                <DropdownMenu right>
+                <DropdownMenu>
                   <DropdownItem>
                     <NavLink href="/about">About us</NavLink>
                   </DropdownItem>
@@ -78,7 +86,12 @@ class Navnav extends React.Component {
                     <NavLink href="https://github.com/TheRealBarenziah/cat-eshop-react" target="_blank">GitHub</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
-              </UncontrolledDropdown>
+              </ButtonDropdown>
+              <NavItem>
+                <Button 
+                  color='primary' 
+                  size='lg'>Log in</Button>
+              </NavItem>
             </Nav>
           </Collapse>
         </Navbar>
@@ -88,3 +101,4 @@ class Navnav extends React.Component {
 }
 
 export default withRouter(Navnav);
+
