@@ -1,22 +1,27 @@
 import React, { Component }  from 'react';
 import { Container, Col, Row, Spinner } from 'reactstrap';
 import { apiUrl, apiKey } from '../../utils/apiStuff';
+import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import CatCard from '../CatCard/CatCard';
 
-export default class MainBody extends Component {
+class MainBody extends Component {
   constructor(props) {
     super(props);
     this.state = {
       category: this.props.category,
-      cats: [{breeds:[{id:'hello world'}], url:'helloUrl'}],
+      cats: [{breeds:[{id:'hello world', name:'Oopsie! You shouldnt see that'}], url:'http://placekitten.com/100/100'}],
       filteredCats: [],
       loading: true
     };
   }
 
-  componentDidMount() {
-    this.setState({loading: false});
+  componentDidMount = async () => {
+    await this.setState({loading: false});
+    await this.fetchApi(this.state.category);
+
+    console.log('MainBo did mount; url should be ' + this.props.location.pathname);
+
   }
 
   fetchApi = async (category) => {
@@ -48,11 +53,11 @@ export default class MainBody extends Component {
     return (
       <div>
         <Container>
-          <Row>
+          <Row xs='12'>
             <h1>{this.state.cats[0].breeds[0].name}</h1>
             <p>{this.state.cats[0].breeds[0].description}</p>
           </Row>
-          <Row>
+          <Row xs='12'>
             {this.state.cats.map((cat, idx) => {
               return (
                 <Col xs='6' key={idx}>
@@ -67,3 +72,5 @@ export default class MainBody extends Component {
     );
   }
 }
+
+export default withRouter(MainBody);

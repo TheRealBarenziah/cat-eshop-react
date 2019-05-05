@@ -2,9 +2,10 @@ import React from 'react';
 import axios from 'axios';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { apiUrl, apiKey } from '../../utils/apiStuff';
+import { withRouter } from 'react-router-dom';
 import MainBody from '../MainBody/MainBody';
 
-export default class DropdownButton extends React.Component {
+class DropdownButton extends React.Component {
   constructor(props) {
     super(props);
 
@@ -33,7 +34,12 @@ export default class DropdownButton extends React.Component {
 
   handleCategoryClick(category) {
     this.setState({ currentCategory: category });
+    this.redirect(category);
     console.log('I tried to do stuff l35 and "id" was : ' + category);
+  }
+
+  redirect = (breedId) => {
+    return this.props.history.push(`/breeds/${breedId}`);
   }
 
   getCategories(){
@@ -47,7 +53,7 @@ export default class DropdownButton extends React.Component {
       <React.Fragment>
         <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} size='lg' >
           <DropdownToggle caret color='warning'>
-      Select Cat Breed
+      Get cats by breed
           </DropdownToggle>
           <DropdownMenu>
             {
@@ -60,9 +66,9 @@ export default class DropdownButton extends React.Component {
             }
           </DropdownMenu>
         </ButtonDropdown>
-        <MainBody category={this.state.currentCategory}/>
       </React.Fragment>
     );
   }
 }
 
+export default withRouter(DropdownButton);

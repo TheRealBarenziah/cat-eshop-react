@@ -10,9 +10,13 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem,
+  Button } from 'reactstrap';
+import DropdownButton from '../DropdownButton/DropdownButton';
+import Basket from '../Basket/Basket';
+import { withRouter } from 'react-router-dom';
 
-export default class Example extends React.Component {
+class Navnav extends React.Component {
   constructor(props) {
     super(props);
 
@@ -35,7 +39,28 @@ export default class Example extends React.Component {
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
               <NavItem>
-                <NavLink href="/random-image">Random Cat image</NavLink>
+                <DropdownButton />
+              </NavItem>
+              <NavItem>
+                <Button  
+                  color='danger'
+                  size='lg'
+                  onClick={
+                    this.props.location.pathname !== '/random-image' ? 
+                      () => { this.props.history.push('/random-image');}:
+                      () => { this.props.history.push('/');}
+                  }
+                >
+                  {
+                    this.props.location.pathname !== '/random-image'? 
+                      'GET HOT DEAL':
+                      'Go back Home'
+                  }
+                </Button>
+                {/* <NavLink href="/random-image">Random Cat image</NavLink> */}
+              </NavItem>
+              <NavItem>
+                <Basket />
               </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
@@ -61,3 +86,5 @@ export default class Example extends React.Component {
     );
   }
 }
+
+export default withRouter(Navnav);
