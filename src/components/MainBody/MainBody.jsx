@@ -49,12 +49,13 @@ export default class MainBody extends Component {
       <div>
         <Container>
           <Row>
+            <h1>{this.state.cats[0].breeds[0].name}</h1>
             <p>{this.state.cats[0].breeds[0].description}</p>
           </Row>
           <Row>
             {this.state.cats.map((cat, idx) => {
               return (
-                <Col xs='4' key={idx}>
+                <Col xs='6' key={idx}>
                   <CatCard {...cat}/>
                 </Col>
               );

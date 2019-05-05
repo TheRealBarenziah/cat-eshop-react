@@ -37,23 +37,20 @@ export default class Example extends React.Component {
               <NavItem>
                 <NavLink href="/random-image">Random Cat image</NavLink>
               </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/TheRealBarenziah/cat-eshop-react">GitHub</NavLink>
-              </NavItem>
               <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav caret>
-                  Options
+                  More...
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    Option 1
+                    <NavLink href="/about" target="_blank">About us</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    Option 2
+                    <NavLink href="/legal-mentions" target="_blank">Legal Mentions</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
-                    Reset
+                    <NavLink href="https://github.com/TheRealBarenziah/cat-eshop-react" target="_blank">GitHub</NavLink>
                   </DropdownItem>
                 </DropdownMenu>
               </UncontrolledDropdown>

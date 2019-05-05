@@ -20,7 +20,7 @@ const items = [
     src: 'https://i.ibb.co/82bpWpg/cortex1000x500.png',
     altText: 'Kitten Placeholder2',
     title: 'Did you know ?' ,
-    caption: 'Rats are clever than cats. Eat a cat, save a rat.'
+    caption: 'Rats are clever than cats. Save a rat, eat a cat.'
   },
   {
     src: 'https://i.ibb.co/HXCcYfd/cooka1000x500.png',
@@ -76,7 +76,10 @@ class Slider extends Component {
           onExited={this.onExited}
           key={item.src}
         >
-          <img src={item.src} alt={item.altText} />
+          <img 
+            src={item.src} 
+            alt={item.altText} 
+            className="mySliderImg" />
           <Media query="(max-width: 767px)">
             {matches =>
               matches ? (
