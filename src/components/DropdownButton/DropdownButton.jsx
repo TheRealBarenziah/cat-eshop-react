@@ -33,7 +33,6 @@ export default class DropdownButton extends React.Component {
 
   handleCategoryClick(category) {
     this.setState({ currentCategory: category });
-    this.forceUpdate();
     console.log('I tried to do stuff l35 and "id" was : ' + category);
   }
 
