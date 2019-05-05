@@ -1,8 +1,9 @@
 import React from 'react';
 import { Media } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
+import Counter from './Counter';
 
-function CatCard({url, id, history}) {
+function CatCard({url, id, history, height}) {
   return (
 
     <Media>
@@ -19,7 +20,8 @@ function CatCard({url, id, history}) {
         <Media heading>
           {id}
         </Media>
-        <p>Stats here</p>
+        <p>Price: {height} $</p>
+        < Counter/>
       </Media>
     </Media>
   );

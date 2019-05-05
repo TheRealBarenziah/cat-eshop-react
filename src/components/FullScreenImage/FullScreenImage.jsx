@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { apiUrl, apiKey } from '../../utils/apiStuff';
 import axios from 'axios';
 import { withRouter } from 'react-router-dom';
+import './FullScreenImage.scss';
 
 class FullScreenImage extends Component {
   constructor(props) {
@@ -25,11 +26,10 @@ class FullScreenImage extends Component {
     render() {
       console.log('Hello! FullScreenImage component rendered');
       return (
-        <div>
-          <h1>Prime deal !</h1>
-          <h3>Specimen n° {this.state.cats.id}</h3>
-          <p>Price:{this.state.cats.height}</p>
-          <img src={this.state.cats.url} alt={Math.random()} />
+        <div className='mySexyFullScreenImage'>
+          <h3>Specimen tag: '{this.state.cats.id}'</h3>
+          <p>Price: {this.state.cats.height} $ USD, VAT included</p>
+          <img src={this.state.cats.url} alt={Math.random()} className='myBigTargetImg' />
         </div>     
 
       );

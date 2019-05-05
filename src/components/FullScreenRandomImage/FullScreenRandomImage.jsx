@@ -3,6 +3,7 @@ import { apiUrl, apiKey } from '../../utils/apiStuff';
 import axios from 'axios';
 import { Spinner } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
+import '../FullScreenImage/FullScreenImage.scss';
 
 class FullScreenRandomImage extends Component {
   constructor(props) {
@@ -35,12 +36,12 @@ class FullScreenRandomImage extends Component {
       }
       let cat = this.state.cats[0];
       return ( 
-        <div>
+        <div className='mySexyFullScreenImage'>
           <h1>Prime deal !</h1>
           <h3>Specimen tag: '{cat.id}'</h3>
           <p>Price: {cat.height} $ USD, VAT included</p>
 
-          <img src={cat.url} alt={cat.id} />
+          <img src={cat.url} alt={cat.id} className='myBigRandomImg' />
         </div>  
       );
     }
