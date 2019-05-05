@@ -3,6 +3,7 @@ import axios from 'axios';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { apiUrl, apiKey } from '../../utils/apiStuff';
 import { withRouter } from 'react-router-dom';
+import './DropdownButton.scss';
 
 class DropdownButton extends React.Component {
   constructor(props) {
@@ -50,19 +51,31 @@ class DropdownButton extends React.Component {
   render() {
     return (
       <React.Fragment>
-        <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} size='lg' >
+        <ButtonDropdown 
+          isOpen={this.state.dropdownOpen} 
+          toggle={this.toggle} 
+          size='lg' 
+          className='dropdownButton'
+        >
           <DropdownToggle caret color='warning'>
       Get cats by breed
           </DropdownToggle>
           <DropdownMenu>
-            {
-              this.getCategories().map((category, index) => {
-                return <DropdownItem 
-                  onClick={() => this.handleCategoryClick(this.state.cats[index].id)}
-                  key={`myKey_${index}`}
-                >{category}</DropdownItem>;
-              })
-            }
+            <ul className='columns'>
+              {
+                this.getCategories().map((category, index) => {
+                  return ( 
+                    <li 
+                      key={`myKey_${index}`} 
+                      className='myList'>
+                      <DropdownItem 
+                        onClick={() => this.handleCategoryClick(this.state.cats[index].id)}
+                      >{category}</DropdownItem>
+                    </li>
+                  );
+                })
+              }
+            </ul>
           </DropdownMenu>
         </ButtonDropdown>
       </React.Fragment>
