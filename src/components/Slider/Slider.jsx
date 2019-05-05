@@ -20,13 +20,13 @@ const items = [
     src: 'https://i.ibb.co/82bpWpg/cortex1000x500.png',
     altText: 'Kitten Placeholder2',
     title: 'Did you know ?' ,
-    caption: 'Rats are clever than cats. Save a rat, eat a cat.'
+    caption: 'Rats are more clever than cats. Save a rat, eat a cat.'
   },
   {
     src: 'https://i.ibb.co/HXCcYfd/cooka1000x500.png',
     altText: 'Kitten Placeholder3',
-    title: 'O Tempora O mores' ,
-    caption: 'Eating cat meat is legal in most parts of the world, but not in NYC. Please check your local legislation before proceeding.'
+    title: 'O tempora O mores' ,
+    caption: 'Eating cat meat is legal in most parts of the world, but not in NYC. Please check your local laws before proceeding.'
   }
 ];
 
@@ -99,6 +99,7 @@ class Slider extends Component {
         activeIndex={activeIndex}
         next={this.next}
         previous={this.previous}
+        interval={[10000]}
         className='Carourou'
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />

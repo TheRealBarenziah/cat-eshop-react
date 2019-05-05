@@ -3,7 +3,6 @@ import axios from 'axios';
 import { ButtonDropdown, DropdownToggle, DropdownMenu, DropdownItem } from 'reactstrap';
 import { apiUrl, apiKey } from '../../utils/apiStuff';
 import { withRouter } from 'react-router-dom';
-import MainBody from '../MainBody/MainBody';
 
 class DropdownButton extends React.Component {
   constructor(props) {

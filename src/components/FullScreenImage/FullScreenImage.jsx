@@ -26,6 +26,9 @@ class FullScreenImage extends Component {
       console.log('Hello! FullScreenImage component rendered');
       return (
         <div>
+          <h1>Prime deal !</h1>
+          <h3>Specimen n° {this.state.cats.id}</h3>
+          <p>Price:{this.state.cats.height}</p>
           <img src={this.state.cats.url} alt={Math.random()} />
         </div>     
 

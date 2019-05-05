@@ -33,9 +33,15 @@ class FullScreenRandomImage extends Component {
           </React.Fragment>
         );
       }
-      return (
-        <img src={this.state.cats[0].url} alt={this.state.cats[0].id} />
+      let cat = this.state.cats[0];
+      return ( 
+        <div>
+          <h1>Prime deal !</h1>
+          <h3>Specimen tag: '{cat.id}'</h3>
+          <p>Price: {cat.height} $ USD, VAT included</p>
 
+          <img src={cat.url} alt={cat.id} />
+        </div>  
       );
     }
 }

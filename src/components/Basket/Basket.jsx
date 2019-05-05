@@ -1,7 +1,7 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
 import React from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input, Label, Form, FormGroup } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Input } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
 
 class Basket extends React.Component {
@@ -55,7 +55,7 @@ export default withRouter(Basket);
 
 // To return to default example: pass unmountOnClose: true in constructor and put snippet below in 1st FormGroup under Label
 
-{/* <Form inline onSubmit={(e) => e.preventDefault()}>
+/* <Form inline onSubmit={(e) => e.preventDefault()}>
   <FormGroup>
     <Label for="unmountOnClose">Modal memory:</Label>{' '}
            
@@ -66,4 +66,4 @@ export default withRouter(Basket);
   </FormGroup>
   {' '}
   <Button color="danger" onClick={this.toggle}>{this.props.buttonLabel}</Button>
-</Form>; */}
+</Form>; */
