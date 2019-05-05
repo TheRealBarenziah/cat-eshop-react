@@ -46,7 +46,7 @@ export default class DropdownButton extends React.Component {
     return (
       <React.Fragment>
         <ButtonDropdown isOpen={this.state.dropdownOpen} toggle={this.toggle} size='lg' >
-          <DropdownToggle caret color='success'>
+          <DropdownToggle caret color='warning'>
       Select Cat Breed
           </DropdownToggle>
           <DropdownMenu>

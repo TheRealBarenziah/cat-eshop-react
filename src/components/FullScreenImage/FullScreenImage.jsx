@@ -19,9 +19,11 @@ class FullScreenImage extends Component {
           this.setState({ cats });
         })
         .catch((err) => console.log(err));
+      console.log(`${apiUrl}/images/${this.props.match.params.id}?x-api-key=${apiKey}`);
     }
 
     render() {
+      console.log('Hello! FullScreenImage component rendered');
       return (
         <div>
           <img src={this.state.cats.url} alt={Math.random()} />
