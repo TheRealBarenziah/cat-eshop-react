@@ -68,10 +68,10 @@ class Navnav extends React.Component {
                 </DropdownToggle>
                 <DropdownMenu right>
                   <DropdownItem>
-                    <NavLink href="/about" target="_blank">About us</NavLink>
+                    <NavLink href="/about">About us</NavLink>
                   </DropdownItem>
                   <DropdownItem>
-                    <NavLink href="/legal-mentions" target="_blank">Legal Mentions</NavLink>
+                    <NavLink href="/legal-mentions">Legal Mentions</NavLink>
                   </DropdownItem>
                   <DropdownItem divider />
                   <DropdownItem>
