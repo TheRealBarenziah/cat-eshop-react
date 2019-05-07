@@ -4,6 +4,7 @@ import { apiUrl, apiKey } from '../../utils/apiStuff';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
 import CatCard from '../CatCard/CatCard';
+import './MainBody.scss';
 
 class MainBody extends Component {
   constructor(props) {
@@ -52,9 +53,9 @@ class MainBody extends Component {
     }
     return (
       <div>
-        <Container>
+        <Container className='my-container-margin-top mainBody'>
           <Row xs='12'>
-            <h1>{this.state.cats[0].breeds[0].name}</h1>
+            <h1 className='myTitle'>{this.state.cats[0].breeds[0].name}</h1>
             <p>{this.state.cats[0].breeds[0].description}</p>
           </Row>
           <Row xs='12'>

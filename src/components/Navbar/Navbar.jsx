@@ -7,7 +7,6 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
@@ -69,7 +68,6 @@ class Navnav extends React.Component {
               <ButtonDropdown 
                 isOpen={this.state.dropdownOpen} 
                 toggle={this.toggle}
-                direction={(['down'])}
               >
                 <DropdownToggle caret>
                   More... 

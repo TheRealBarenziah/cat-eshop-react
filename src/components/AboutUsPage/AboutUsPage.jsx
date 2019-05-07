@@ -1,9 +1,12 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export default function AboutUsPage() {
+function AboutUsPage() {
   return (
-    <div>
+    <div className="my-container-margin-top">
       <p>This is about me.</p>
     </div>
   );
 }
+
+export default withRouter(AboutUsPage);

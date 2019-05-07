@@ -4,7 +4,7 @@ import { Container, Col, Row } from 'reactstrap';
 
 export default function HomePage() {
   return (
-    <Container>
+    <Container className='my-container-margin-top'>
       <Row>
         <Col>
           <Slider />

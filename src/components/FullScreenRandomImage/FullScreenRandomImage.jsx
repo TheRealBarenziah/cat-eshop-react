@@ -36,7 +36,7 @@ class FullScreenRandomImage extends Component {
       }
       let cat = this.state.cats[0];
       return ( 
-        <div className='mySexyFullScreenImage'>
+        <div className='mySexyFullScreenImage my-container-margin-top'>
           <h1>Prime deal !</h1>
           <h3>Specimen tag: '{cat.id}'</h3>
           <p>Price: {cat.height} $ USD, VAT included</p>

@@ -1,9 +1,12 @@
 import React from 'react';
+import { withRouter } from 'react-router-dom';
 
-export default function LegalMentionsPage() {
+function LegalMentionsPage() {
   return (
-    <div>
+    <div className='my-container-margin-top'>
       <p>Here goes my legal mentions</p>
     </div>
   );
 }
+
+export default withRouter(LegalMentionsPage);

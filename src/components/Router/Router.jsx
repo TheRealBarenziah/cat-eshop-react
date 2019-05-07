@@ -15,7 +15,7 @@ export default function Router() {
       <Route exact path='/random-image' component={RandomImage} />
       <Route exact path='/about' component={AboutUsPage} />
       <Route exact path='/legal-mentions' component={LegalMentionsPage} />
-      <Route path='/' component={HomePage}/>
+      <Route exact path='/' component={HomePage}/>
     </Switch>
   );
 }

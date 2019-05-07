@@ -26,7 +26,7 @@ class FullScreenImage extends Component {
     render() {
       console.log('Hello! FullScreenImage component rendered');
       return (
-        <div className='mySexyFullScreenImage'>
+        <div className='mySexyFullScreenImage my-container-margin-top'>
           <h3>Specimen tag: '{this.state.cats.id}'</h3>
           <p>Price: {this.state.cats.height} $ USD, VAT included</p>
           <img src={this.state.cats.url} alt={Math.random()} className='myBigTargetImg' />
