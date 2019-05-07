@@ -1,11 +1,16 @@
 .mainBody {
-
-    .myDescription {
-      font-style: italic;
+    .mainBodyTitle{
       margin: auto
     }
-    .myTitle{
-      font-family: 'Roboto', sans-serif;
-      margin: auto
+    .myDescription {
+      font-style: italic;
+      margin: auto;
+      font-family: 'ZCOOL KuaiLe', cursive !important
+    }
+
+    .container{
+      margin-right: 0 !important;  
+      margin-left: 0 !important;
+      max-width: 100% !important;
     }
 }

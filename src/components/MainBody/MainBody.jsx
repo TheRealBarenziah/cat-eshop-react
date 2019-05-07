@@ -52,24 +52,26 @@ class MainBody extends Component {
       );
     }
     return (
-      <div>
-        <Container className='my-container-margin-top mainBody'>
-          <Row xs='12' className='mainBodyTitle'>
-            <h1 className='myTitle'>{this.state.cats[0].breeds[0].name}</h1>
+      <Container className='my-container-margin-top mainBody' id='myAnnoyingContainer'>
+        <Row xs='12'>
+          <Col xs='12'>     
+            <h1 className='mainBodyTitle'>{this.state.cats[0].breeds[0].name}</h1>
+          </Col>
+          <Col xs='12'>     
             <p className='myDescription'>{this.state.cats[0].breeds[0].description}</p>
-          </Row>
-          <Row xs='12'>
-            {this.state.cats.map((cat, idx) => {
-              return (
-                <Col xs='6' key={idx}>
-                  <CatCard {...cat}/>
-                </Col>
-              );
-            })}
+          </Col>
+        </Row>
+        <Row xs='12'>
+          {this.state.cats.map((cat, idx) => {
+            return (
+              <Col xs='6' key={idx}>
+                <CatCard {...cat}/>
+              </Col>
+            );
+          })}
             
-          </Row>
-        </Container>
-      </div>
+        </Row>
+      </Container>
     );
   }
 }

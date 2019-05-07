@@ -38,7 +38,7 @@ class FullScreenRandomImage extends Component {
       return ( 
         <div className='mySexyFullScreenImage my-container-margin-top'>
           <h1>Prime deal !</h1>
-          <h3>Specimen tag: '{cat.id}'</h3>
+          <h3>Product: {cat.id}</h3>
           <p>Price: {cat.height} $ USD, VAT included</p>
 
           <img src={cat.url} alt={cat.id} className='myBigRandomImg' />

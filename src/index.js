@@ -9,7 +9,7 @@ import WebFont from 'webfontloader';
 
 WebFont.load({
   google: {
-    families: ['Roboto:400', 'sans-serif']
+    families: ['Roboto|ZCOOL+KuaiLe', 'Roboto', 'sans-serif']
   }
 });
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import Router from './components/Router/Router';
-import './App.css';
+import './App.scss';
 import Navnav from './components/Navbar/Navbar';
 
 function App() {

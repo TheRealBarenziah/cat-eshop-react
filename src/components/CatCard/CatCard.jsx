@@ -14,12 +14,12 @@ function CatCard({url, id, history, height}) {
           className="media-object getCalm" 
           src={url} 
           data-holder-rendered="true" 
-          style={{height:'200px'}}
+          style={{height:'35vh'}}
           onClick={() => history.push(`/images/${id}`)}/>
       </Media>
       <Media body>
         <Media heading>
-          Price: <em>{height}$</em>
+          <p className='mediaPrice'>Price: <em>{height}$</em></p>
         </Media>
         <p>
         Product: {id}

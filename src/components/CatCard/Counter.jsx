@@ -22,8 +22,18 @@ export default class Counter extends Component {
           <Col 
             xs='6' 
           >
-            <p>
+            <p className='myQty'>
             Qty: <strong>{this.state.count}</strong></p>
+          </Col>
+          <Col      
+            xs='2'    
+            className='myCounterButton'
+          >
+            <MySexyButton 
+              className='mySexButton'
+              sign="-" 
+              count={this.state.count} 
+              updateCount={this.handleCount.bind(this)} />
           </Col>
           <Col     
             className='myCounterButton'
@@ -31,15 +41,6 @@ export default class Counter extends Component {
           >
             <MySexyButton 
               sign="+" 
-              count={this.state.count} 
-              updateCount={this.handleCount.bind(this)} />
-          </Col>
-          <Col      
-            xs='2'    
-            className='myCounterButton'
-          >
-            <MySexyButton 
-              sign="-" 
               count={this.state.count} 
               updateCount={this.handleCount.bind(this)} />
           </Col>
