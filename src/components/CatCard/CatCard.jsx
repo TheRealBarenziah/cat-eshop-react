@@ -2,11 +2,12 @@ import React from 'react';
 import { Media } from 'reactstrap';
 import { withRouter } from 'react-router-dom';
 import Counter from './Counter';
+import './CatCard.scss';
 
 function CatCard({url, id, history, height}) {
   return (
 
-    <Media>
+    <Media className='cardContainer'>
       <Media left href={`/images/${id}`}>
         <Media object data-src={`/images/${id}`}
           alt="Kitten" 
@@ -18,9 +19,11 @@ function CatCard({url, id, history, height}) {
       </Media>
       <Media body>
         <Media heading>
-          {id}
+          ID: {id}
         </Media>
-        <p>Price: {height} $</p>
+        <p className='chloePrice'>
+        Price: <em>{height}$</em>
+        </p>
         < Counter/>
       </Media>
     </Media>

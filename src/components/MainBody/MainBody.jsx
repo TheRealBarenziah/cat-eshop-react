@@ -56,7 +56,7 @@ class MainBody extends Component {
         <Container className='my-container-margin-top mainBody'>
           <Row xs='12'>
             <h1 className='myTitle'>{this.state.cats[0].breeds[0].name}</h1>
-            <p>{this.state.cats[0].breeds[0].description}</p>
+            <p className='myDescription'>{this.state.cats[0].breeds[0].description}</p>
           </Row>
           <Row xs='12'>
             {this.state.cats.map((cat, idx) => {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import {Button} from 'reactstrap';
+import {Container, Col, Row, Button} from 'reactstrap';
 import MySexyButton from '../mySexyButton/mySexyButton';
+import './CatCard.scss';
 
 export default class Counter extends Component {
   constructor(props) {
@@ -16,15 +17,42 @@ export default class Counter extends Component {
 
   render() {
     return (
-      <div>
-        Qty: {this.state.count}
-        <MySexyButton sign="+" count={this.state.count} updateCount={this.handleCount.bind(this)} />
-        <MySexyButton sign="-" count={this.state.count} updateCount={this.handleCount.bind(this)} />
-        <Button
-          color='success'
-          onClick={() => console.log('Someday I will do stuff.')}
-        >Buy !</Button>
-      </div>
-    );
+      <Container className='myCatCard'>
+        <Row>
+          <Col 
+            xs='6' 
+          >
+            <p 
+              className='quantity-count'>
+            Qty: <strong>{this.state.count}</strong></p>
+          </Col>
+          <Col     
+            className='myCounterButton'
+            xs='2'
+          >
+            <MySexyButton 
+              sign="+" 
+              count={this.state.count} 
+              updateCount={this.handleCount.bind(this)} />
+          </Col>
+          <Col      
+            xs='2'    
+            className='myCounterButton'
+          >
+            <MySexyButton 
+              sign="-" 
+              count={this.state.count} 
+              updateCount={this.handleCount.bind(this)} />
+          </Col>
+          <Col xs='12'>
+            <Button
+              size='lg'
+              className='buy-button'
+              color='success'
+              onClick={() => console.log('Someday I will do stuff.')}
+            >Buy !</Button>
+          </Col>
+        </Row>
+      </Container>     );
   }
 }
