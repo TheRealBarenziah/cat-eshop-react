@@ -19,10 +19,10 @@ function CatCard({url, id, history, height}) {
       </Media>
       <Media body>
         <Media heading>
-          ID: {id}
+          Price: <em>{height}$</em>
         </Media>
-        <p className='chloePrice'>
-        Price: <em>{height}$</em>
+        <p>
+        Product: {id}
         </p>
         < Counter/>
       </Media>

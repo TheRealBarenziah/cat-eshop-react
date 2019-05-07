@@ -5,7 +5,7 @@ import Navnav from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App myDarkyBackground">
       <Navnav />
       <Router />
     </div>

@@ -1,8 +1,22 @@
 .myNavNav {
+ 
   .fixed-top {
     position: fixed;
    top: 0;
    left: 0;
    right: 0
   }
+  .myBannerContainer{
+    padding: 0 !important
+  }
+  .myBanner{
+    margin-top: 1px
+  }
+}
+
+.navbar {
+  padding-top: 0 !important;
+  padding-bottom: 2px !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }

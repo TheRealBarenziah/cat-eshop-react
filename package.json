@@ -12,7 +12,8 @@
     "react-media": "^1.9.2",
     "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
-    "reactstrap": "^8.0.0"
+    "reactstrap": "^8.0.0",
+    "webfontloader": "^1.6.28"
   },
   "scripts": {
     "start": "react-scripts start",

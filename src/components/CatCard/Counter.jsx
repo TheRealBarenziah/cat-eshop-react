@@ -22,8 +22,7 @@ export default class Counter extends Component {
           <Col 
             xs='6' 
           >
-            <p 
-              className='quantity-count'>
+            <p>
             Qty: <strong>{this.state.count}</strong></p>
           </Col>
           <Col     

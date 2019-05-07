@@ -36,8 +36,16 @@ class Navnav extends React.Component {
   render() {
     return (
       <div className='myNavNav'>
-        <Navbar color="light" light expand="md" className='fixed-top'>
-          <NavbarBrand href="/">CatRat</NavbarBrand>
+        <Navbar color='dark' light expand="md" className='fixed-top'>
+          <NavbarBrand 
+            href="/" 
+            className='myBannerContainer'>
+            <img 
+              className='myBanner'
+              src='https://i.ibb.co/GHf9N4d/catrat.png' 
+              alt='CatRat' 
+            ></img>
+          </NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>

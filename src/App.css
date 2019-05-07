@@ -1,7 +1,13 @@
 .App {
   text-align: center;
+  min-height: 100vh;
 }
 
 .my-container-margin-top {
   margin-top: 8vh
+}
+
+.myDarkyBackground {
+  background-color: #131313;
+  color: white
 }

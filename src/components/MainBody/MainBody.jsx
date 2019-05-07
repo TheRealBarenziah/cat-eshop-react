@@ -54,7 +54,7 @@ class MainBody extends Component {
     return (
       <div>
         <Container className='my-container-margin-top mainBody'>
-          <Row xs='12'>
+          <Row xs='12' className='mainBodyTitle'>
             <h1 className='myTitle'>{this.state.cats[0].breeds[0].name}</h1>
             <p className='myDescription'>{this.state.cats[0].breeds[0].description}</p>
           </Row>
